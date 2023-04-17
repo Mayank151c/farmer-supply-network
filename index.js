@@ -15,7 +15,7 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true })); 
 
 app.use((req, res, next)=> {console.log(req.url); next()})
-mongoose.connect('mongodb://localhost:27017/farmerSupplyChain', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB'))
   .catch((error) => console.error(error));
  
