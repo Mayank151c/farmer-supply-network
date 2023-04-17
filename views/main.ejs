@@ -1,0 +1,99 @@
+<!-- <!DOCTYPE html> -->
+<html>
+    <head>
+        <title>Farmer Supply Network</title>
+        <link rel="stylesheet" type="text/css" href="css/home.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    
+    <body>
+        <h1 id="title">
+            <!-- <marquee> -->
+                Farmer Supply Network
+            <!-- </marquee> -->
+        </h1>
+
+        <div id="main">
+        <div class="container">
+            <div class="profile-header">
+                <div class="profile-img">
+                    <img src="image/image.jpg" width="200" alt="Profile Image">
+                </div>
+                <div class="profile-nav-info">
+                    <h3 class="user-name"><%=name%></h3>
+                    <div class="address">
+                        <p id="state" class="state"><%=type%></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="main-bd">
+                <div class="left-side">
+                    <div class="profile-side">
+                        <p class="mobile-no"><i class="fa fa-phone"></i>
+                            <h3><b>Contact: <%=phone%></b></h3>
+                        </p>
+                        <i class="user-mail"><i class="fa fa-envelope"></i>
+                            <h3><%=username%>@gmail.com</h3>
+                        <br>
+                        <div class="user-bio">
+                            <h3>Personal Details</h3><br>
+                            <p class="bio">
+                                <b>NAME: <%=name%></b><br><br>
+                                <b>ADDRESS: <%=address%></b><br><br>
+                                <b>USER TYPE: <%=type%></b><br><br>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="right-side">
+
+                    <div class="nav">
+                        <ul>
+                            <li onclick="tabs(0)" class="user-post active"><b>Add Crops</b></li>
+                            <li onclick="tabs(1)" class="user-post "><b>List of Crops</b></li>
+                            <li onclick="tabs(2)" class="user-post "><b>List of Distributers</b></li>
+                            <li onclick="tabs(3)" class="user-post "><b>Buy Crops</b></li>
+                        </ul>
+                    </div>
+                    <div class="profile-body">
+                        
+                        <%- include('nav_addcropform') %>
+                        <%- include('nav_croplist') %>
+                        <%- include('nav_distributerlist') %>
+                        <%- include('nav_buycroplist') %>
+
+                        <div class="tab">
+                            <div class="account-setting">
+                                <h1>Acount Setting</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit omnis
+                                    eaque, expedita nostrum, facere libero provident laudantium. Quis, hic
+                                    doloribus! Laboriosam nemo tempora praesentium. Culpa quo velit omnis,
+                                    debitis maxime, sequi animi dolores commodi odio placeat,
+                                    magnam, cupiditate facilis impedit veniam? Soluta aliquam excepturi illum
+                                    natus adipisci ipsum quo, voluptatem, nemo, commodi, molestiae doloribus magni
+                                    et. Cum, saepe enim quam voluptatum veldebitis nihil, recusandae, omnis officiis
+                                    tenetur, ullam rerum.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="src/main.js"></script>
+    
+    <script>
+        
+    </script>
+
+    </body>
+</html>
